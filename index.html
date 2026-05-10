@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -8,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- TikTok Pixel Code Start -->
 
 <script>
 !function (w, d, t) {
@@ -19,6 +22,9 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   ttq.page();
 }(window, document, 'ttq');
 </script>
+
+<!-- TikTok Pixel Code End -->
+
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
@@ -50,7 +56,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     overflow-x:hidden;
   }
 
-  /* Soft atmospheric background */
   body::before{
     content:"";
     position:fixed; inset:0;
@@ -60,7 +65,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     pointer-events:none;
   }
 
-  /* === Card === */
   .card{
     width:100%;
     max-width:420px;
@@ -77,7 +81,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   }
 
-  /* Decorative top tab */
   .card::before{
     content:"";
     position:absolute;
@@ -88,7 +91,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     border-radius:0 0 6px 6px;
   }
 
-  /* Corner ticks (like a ticket) */
   .card::after{
     content:"";
     position:absolute;
@@ -99,7 +101,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     opacity:0.5;
   }
 
-  /* === Label === */
   .label{
     font-size:10px;
     letter-spacing:0.35em;
@@ -120,7 +121,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   .label::before{ right:100%; }
   .label::after{ left:100%; }
 
-  /* === Gift icon === */
   .icon{
     width:84px; height:84px;
     margin:0 auto 24px;
@@ -145,7 +145,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     animation: spin 30s linear infinite;
   }
 
-  /* === Headline === */
   h1{
     font-family:'Shippori Mincho', serif;
     font-size:clamp(22px, 6vw, 26px);
@@ -168,14 +167,12 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     border-radius:2px;
   }
 
-  /* === Subtext === */
   .sub{
     font-size:14px;
     color:var(--ink-soft);
     margin-bottom:32px;
   }
 
-  /* === Divider === */
   .divider{
     display:flex;
     align-items:center;
@@ -194,7 +191,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     border-radius:50%;
   }
 
-  /* === CTA === */
   .cta{
     display:inline-flex;
     align-items:center;
@@ -212,6 +208,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       0 1px 0 rgba(255,255,255,0.3) inset,
       0 12px 24px -6px rgba(6,199,85,0.45);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    cursor:pointer;
   }
   .cta:hover{
     background:var(--accent-dark);
@@ -235,7 +232,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     letter-spacing:-0.05em;
   }
 
-  /* === Note === */
   .note{
     font-size:11px;
     color:var(--ink-soft);
@@ -291,7 +287,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     opacity:0.4;
   }
 
-  /* === Animations === */
   @keyframes rise{
     from{ opacity:0; transform:translateY(16px) scale(0.98); }
     to{ opacity:1; transform:translateY(0) scale(1); }
@@ -304,6 +299,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     .card{ padding:36px 24px 30px; }
   }
 </style>
+
 </head>
 <body>
 
@@ -324,7 +320,9 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <span class="divider-dot"></span>
   </div>
 
-  <a href="https://lin.ee/zukdAk6" class="cta" target="_blank" rel="noopener" onclick="ttq.track('Contact');">
+  <!-- ★ onclickを削除し、IDを付与 -->
+
+  <a href="https://lin.ee/zukdAk6" class="cta" id="lineCta" target="_blank" rel="noopener">
     <span class="cta-icon">L</span>
     LINE追加で受け取り
   </a>
@@ -340,6 +338,62 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   </div>
 
 </div>
+
+<!-- ★ TikTok Pixel: Contact イベント発火スクリプト -->
+
+<script>
+(function () {
+  var cta = document.getElementById('lineCta');
+  if (!cta) return;
+
+  // event_id 生成（重複排除・Test Events用）
+  function genEventId() {
+    return 'contact_' + Date.now() + '_' + Math.random().toString(36).slice(2, 11);
+  }
+
+  cta.addEventListener('click', function (e) {
+    // 二重発火防止
+    if (cta.dataset.fired === '1') return;
+    cta.dataset.fired = '1';
+
+    var url = cta.href;
+    var eventId = genEventId();
+
+    // ナビゲーションを止めて、確実にイベントを送ってから遷移
+    e.preventDefault();
+
+    try {
+      if (window.ttq && typeof window.ttq.track === 'function') {
+        window.ttq.track('Contact', {
+          contents: [{
+            content_id: 'line_friend_add',
+            content_type: 'product',
+            content_name: 'LINE友だち追加'
+          }],
+          value: 0,
+          currency: 'JPY'
+        }, {
+          event_id: eventId
+        });
+      }
+    } catch (err) {
+      // 失敗しても遷移は止めない
+      console.warn('ttq.track failed:', err);
+    }
+
+    // 250ms 待ってから新タブで開く（events.js が beacon 送信を完了する余裕）
+    var opened = false;
+    var openLink = function () {
+      if (opened) return;
+      opened = true;
+      window.open(url, '_blank', 'noopener,noreferrer');
+      // 念のためフラグを戻す（戻ってきて再クリックできるように）
+      setTimeout(function () { cta.dataset.fired = '0'; }, 1000);
+    };
+    setTimeout(openLink, 250);
+  });
+})();
+</script>
 
 </body>
 </html>
