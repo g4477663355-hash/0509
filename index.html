@@ -320,8 +320,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <span class="divider-dot"></span>
   </div>
 
-  <!-- ★ onclickを削除し、IDを付与 -->
-
   <a href="https://lin.ee/zukdAk6" class="cta" id="lineCta" target="_blank" rel="noopener">
     <span class="cta-icon">L</span>
     LINE追加で受け取り
@@ -339,27 +337,24 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 </div>
 
-<!-- ★ TikTok Pixel: Contact イベント発火スクリプト -->
+<!-- TikTok Pixel: Contact イベント発火スクリプト -->
 
 <script>
 (function () {
   var cta = document.getElementById('lineCta');
   if (!cta) return;
 
-  // event_id 生成（重複排除・Test Events用）
   function genEventId() {
     return 'contact_' + Date.now() + '_' + Math.random().toString(36).slice(2, 11);
   }
 
   cta.addEventListener('click', function (e) {
-    // 二重発火防止
     if (cta.dataset.fired === '1') return;
     cta.dataset.fired = '1';
 
     var url = cta.href;
     var eventId = genEventId();
 
-    // ナビゲーションを止めて、確実にイベントを送ってから遷移
     e.preventDefault();
 
     try {
@@ -369,25 +364,20 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             content_id: 'line_friend_add',
             content_type: 'product',
             content_name: 'LINE友だち追加'
-          }],
-          value: 0,
-          currency: 'JPY'
+          }]
         }, {
           event_id: eventId
         });
       }
     } catch (err) {
-      // 失敗しても遷移は止めない
       console.warn('ttq.track failed:', err);
     }
 
-    // 250ms 待ってから新タブで開く（events.js が beacon 送信を完了する余裕）
     var opened = false;
     var openLink = function () {
       if (opened) return;
       opened = true;
       window.open(url, '_blank', 'noopener,noreferrer');
-      // 念のためフラグを戻す（戻ってきて再クリックできるように）
       setTimeout(function () { cta.dataset.fired = '0'; }, 1000);
     };
     setTimeout(openLink, 250);
